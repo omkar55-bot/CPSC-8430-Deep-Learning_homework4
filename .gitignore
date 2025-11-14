@@ -39,13 +39,15 @@ data/
 *.h5
 *.hdf5
 
-# Outputs
-outputs/
+# Checkpoints (exclude model weights)
 checkpoints/
-results/
-*.png
-*.jpg
-*.jpeg
+
+# Allow outputs and results directories (but exclude TensorBoard logs)
+outputs/*/logs/
+results/*/logs/
+*.log
+tensorboard_logs/
+*.tfevents.*
 
 # Logs
 logs/

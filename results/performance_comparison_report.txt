@@ -1,0 +1,59 @@
+============================================================
+GAN Performance Comparison Report
+============================================================
+
+Dataset: CIFAR-10
+Image Size: 32x32
+Number of Classes: 10
+
+============================================================
+MODEL COMPARISON
+============================================================
+
+DCGAN:
+----------------------------------------
+  Status: ✓ Trained
+  Image Diversity: 0.5139
+  Note: Full IS requires Inception network - this is a simplified metric
+
+WGAN:
+----------------------------------------
+  Status: ✓ Trained
+  Image Diversity: 0.5105
+  Note: Full IS requires Inception network - this is a simplified metric
+
+ACGAN:
+----------------------------------------
+  Status: ✓ Trained
+  Image Diversity: 0.5099
+  Note: Full IS requires Inception network - this is a simplified metric
+
+============================================================
+COMPARISON NOTES
+============================================================
+
+1. Visual Quality: Compare the generated images in the comparison grids
+2. Training Stability: Check training curves in results/ directory
+3. Convergence: Review loss curves to see which model converged faster
+4. Best Images: See results/<gan_type>/best_10_images.png for each model
+
+For full Inception Score (IS) and FID metrics, you would need to:
+- Use a pretrained Inception network for IS
+- Use a pretrained Inception network for FID
+- Compare against real CIFAR-10 statistics
+
+============================================================
+BASELINE COMPARISON
+============================================================
+
+Compare your results to:
+1. Original DCGAN paper results on CIFAR-10
+2. Original WGAN paper results
+3. Original ACGAN paper results
+4. Baseline architecture shown in assignment (adapted for CIFAR-10)
+
+Key differences to note:
+- Architecture variations (kernel size, layer structure)
+- Training hyperparameters
+- Number of training epochs
+- Image quality and diversity
